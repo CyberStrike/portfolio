@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Chris Scott - Portfolio
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    = yield
+    nav.navbar.navbar-fixed-bottom role="navigation"
+      .container
+        .row
+          #nav.flexing
+            .btn-group.btn-group-lg.btn-group-justified
+              = link_to 'Home', root_path, class:'btn'
+              = link_to 'Work', works_path, class:'btn'
+              = link_to 'Social', root_path, class:'btn'

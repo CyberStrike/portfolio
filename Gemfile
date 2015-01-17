@@ -41,10 +41,12 @@ end
 
 gem 'sass-rails' # Use SCSS for stylesheets
 gem 'bootstrap-sass' # Pull our selves up by our Bootstraps
+gem 'autoprefixer-rails' # The future but now
 gem 'slim-rails' # Lose some weight, use slim for templating
 gem 'uglifier' # Use Uglifier as compressor for JavaScript assets
 gem 'coffee-rails' # Use CoffeeScript for .js.coffee assets and views
 gem 'therubyracer', platforms: :ruby # Javascript compiler
+gem 'paperclip'
 gem 'jquery-rails' # jQuery
 gem 'turbolinks' # AJAXED Page Gets
 # gem 'jbuilder', '~> 1.2'# JSON APIs with ease
