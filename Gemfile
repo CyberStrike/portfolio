@@ -23,7 +23,7 @@ end
 
 group :development do
   gem 'spring' ## Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  # gem 'thin' # Use Thin as Server
+  gem 'thin' # Use Thin as Server
   gem 'better_errors' # Better Errors
   gem 'binding_of_caller' # Better Debugging
   gem 'byebug' # Call 'byebug' anywhere in the code to stop execution and get a debugger console
