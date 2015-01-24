@@ -1,23 +1,9 @@
-h1 Listing works
+.container
+  - @works.each do |work|
+    /= work.title
+    = work.body
+    = link_to image_tag(work.image.url(:medium)), work
+      /= link_to 'Edit', edit_work_path(work)
+      /= link_to 'Destroy', work, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-table
-  thead
-    tr
-      th Title
-      th Body
-      th
-      th
-      th
-
-  tbody
-    - @works.each do |work|
-      tr
-        td = work.title
-        td = work.body
-        td = link_to 'Show', work
-        td = link_to 'Edit', edit_work_path(work)
-        td = link_to 'Destroy', work, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New Work', new_work_path
+      /= link_to 'New Work', new_work_path

@@ -1,12 +1,14 @@
-p#notice = notice
+.container
+  .row
+    .text-center
+      = image_tag @work.image.url(:original), class:'work-img'
 
-p
-  strong Title:
-  = @work.title
-p
-  strong Body:
-  = @work.body
+  .work-container
+    .work-title = @work.title
+    p
+      strong Body:
+      = @work.body
 
-= link_to 'Edit', edit_work_path(@work)
-'|
-= link_to 'Back', works_path
+    = link_to 'Edit', edit_work_path(@work)
+    '|
+    = link_to 'Back', works_path

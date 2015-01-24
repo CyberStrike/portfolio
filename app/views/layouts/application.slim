@@ -7,12 +7,16 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  body
+  body{id="#{params[:controller]}" class="#{params[:action]}"}
+    - if notice
+      #notice = notice
+    - if alert
+      #alert = alert if alert
     = yield
     nav.navbar.navbar-fixed-bottom role="navigation"
       .container
         .row
-          #nav.flexing
+          #nav{class="flexing #{@page_class}"}
             .btn-group.btn-group-lg.btn-group-justified
               = link_to 'Home', root_path, class:'btn'
               = link_to 'Work', works_path, class:'btn'
