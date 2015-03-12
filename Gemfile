@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -31,7 +32,8 @@ group :development do
 end
 
 group :production do
-  gem 'unicorn' # Use Unicorn as the app server
+  gem 'thin' # Use Thin as Server
+  #gem 'unicorn' # Use Unicorn as the app server
   gem 'pg' # Postgresql DB
   gem 'rails_12factor' # Heroku asset handler
 end
